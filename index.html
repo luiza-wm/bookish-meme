@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>viagem</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+   <section class="header">
+        <nav>
+            <a href="index.html"> <img src="Beto_Carrero-logo-B89D904A91-seeklogo.com.png" alt="Logo"></a>
+            <div class="nav-links" id="navLinks">
+                <i class="fa fa-times" id="menuHide" onclick="hideMenu()"></i>
+                <ul>
+                    <li><a href="pagina_casa.html">CASA</a></li>
+                    <li><a href="pagina_trajeto.html">TRAJETO</a></li>
+                    <li><a href="#">PARQUE</a></li>
+                    <li><a href="#">PIÇARRAS</a></li>
+                    <li><a href="#">ATRAÇÕES</a></li>
+                </ul>
+            </div>
+            <i class="fa fa-bars" id="menuToggle" onclick="toggleMenu()"></i>
+           
+            
+        </nav>
+
+        <div class="text-box">
+            <h1>Beto Carrero Trip </h1>
+            <p>Uma viagem em família mais do que emocionante.</p>
+            <a href="" class="hero-btn">Venha descobrir!</a>
+        </div>
+   </section>
+
+<!------ Course ------>   
+
+<section class="courses">
+    <h1>Informações</h1>
+    <p>Alguns detalhes interessantes.</p>
+
+    <div class="row">
+        <div class="course-col">
+            <h3>Datas</h3>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptas quos unde praesentium pariatur atque aliquam optio dolorum voluptate minima a ratione similique maiores dolor, vitae ea aliquid totam doloribus obcaecati.</p>
+        </div>
+    
+        <div class="course-col">
+            <h3>Valores</h3>
+             <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptas quos unde praesentium pariatur atque aliquam optio dolorum voluptate minima a ratione similique maiores dolor, vitae ea aliquid totam doloribus obcaecati.</p>
+        </div>
+        <div class="course-col">
+            <h3>Programação</h3>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptas quos unde praesentium pariatur atque aliquam optio dolorum voluptate minima a ratione similique maiores dolor, vitae ea aliquid totam doloribus obcaecati.</p>
+        </div>
+    </div>
+</section>
+<!------ campus ------>
+
+<section class="campus">
+    <h1>Ver & Rever</h1>
+    <p>Principais atrações turísticas que veremos na viagem </p>
+
+    <div class="row">
+        <div class="campus-col">
+            <img src="picarras-102-730x730.jpg">
+            <div class="layer">
+                <h3>PIÇARRAS</h3>
+            </div>
+        </div>
+        <div class="campus-col">
+            <img src="image.png">
+            <div class="layer">
+                <h3>BETO CARRERO</h3>
+            </div>
+        </div>
+        <div class="campus-col">
+            <img src="Captura de tela 2025-01-26 073950.png">
+            <div class="layer">
+                <h3>CHAGLER</h3>
+            </div>
+        </div>
+    </div>
+
+
+</section>
+
+
+
+
+
+
+
+
+
+
+
+<!------JavaScript for Toggle Menu------>
+   <script src="main.js">
+
+  
+       var navLinks = document.getElementById("navLinks");
+
+        function toggleMenu() {
+            if (navLinks.style.right === "0px") {
+                navLinks.style.right = "-200px";
+            } else {
+                navLinks.style.right = "0";
+            }
+        }
+        function hideMenu() {
+            var navLinks = document.getElementById("navLinks");
+            navLinks.style.right = "-200px";  // Esconde o menu
+        }
+
+   </script>
+
+</body>
+</html>
