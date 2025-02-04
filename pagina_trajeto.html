@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trajeto</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+
+        <style>
+            #map {
+                width: 1920px;
+                height: 1080px;
+
+            }
+
+    
+        </style>
+</head>
+<body>
+
+  <div id="map"></div>
+    
+</body>
+
+<script>
+
+   const map = L.map('map');
+   map.setView([-29.738, -50.535], 7)
+
+   L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; <a href ="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contribution '
+   }).addTo(map)
+
+   const shoppingIcon = L.icon({
+        iconUrl: 'shopping-bag\ \(1\).png',
+        iconSize: [30, 30],
+    })
+   
+    const dollarIcon = L.icon({
+        iconUrl: 'dollar.png',
+        iconSize: [30, 30],
+    })
+
+    const radarIcon = L.icon({
+        iconUrl: 'exclamation-mark.png',
+        iconSize: [30, 30],
+    })
+
+    const houseIcon = L.icon({
+        iconUrl: 'house.gif',
+        iconSize: [30, 30]
+    })
+
+    const stopIcon = L.icon({
+        iconUrl: 'stop.png',
+        iconSize: [30, 30]
+    })
+
+   L.marker([-28.214849, -48.700892],{
+    title: "Ferju", 
+    icon: shoppingIcon,
+     
+   })
+   .bindPopup(`
+      <img src="ferju.jpg" alt="Imagem do Shopping" width="200"> 
+    <h1>Ferju</h1><br>
+       <h2>BR 101, Saída 283<br>
+        Imbituba - Santa Catarina<br></h2>
+   `)
+   .addTo(map)
+
+   L.marker([-29.925112, -50.859033],{
+    title: "Pedágio", 
+    icon: dollarIcon,
+     
+   })
+   .bindPopup(`
+        <span class ="popup">
+            <b>Pedágio</b><br>
+            BR 116 - Km 59<br>
+            R$5,10<br>
+   `)
+   .addTo(map)
+
+   L.marker([-28.897815, -49.472905],{
+    title: "Pedágio", 
+    icon: dollarIcon,
+     
+   })
+   .bindPopup(`
+        <span class ="popup">
+            <b>Pedágio</b><br>
+            Araranguá, SC, 88915-000<br>
+            R$2,40
+            
+   `)
+   .addTo(map)
+
+   L.marker([-28.554259, -49.054111],{
+    title: "Pedágio", 
+    icon: dollarIcon,
+     
+   })
+   .bindPopup(`
+        <span class ="popup">
+            <b>Pedágio</b><br>
+            Tubarão, SC, BR - 101 km 344 <br>
+            R$2,40
+            
+   `)
+   .addTo(map)
+
+   L.marker([-29.885898, -50.448951 ],{
+    title: "Pedágio", 
+    icon: dollarIcon,
+     
+   })
+   .bindPopup(`
+        <span class ="popup">
+            <b>Pedágio</b><br>
+            BR-290, km 19, Santo Antônio da Patrulha <br>
+            R$5,50
+            
+   `)
+   .addTo(map)
+
+   L.marker([-29.520638, -49.996808 ],{
+    title: "Pedágio", 
+    icon: dollarIcon,
+     
+   })
+   .bindPopup(`
+        <span class ="popup">
+            <b>Pedágio</b><br>
+            BR-101, km 235, Três Cachoeiras <br>
+            R$5,50
+            
+   `)
+   .addTo(map)
+
+   L.marker([-28.350696, -48.739321 ],{
+    title: "Pedágio", 
+    icon: dollarIcon,
+     
+   })
+   .bindPopup(`
+        <span class ="popup">
+            <b>Pedágio</b><br>
+            Laguna, SC, 88790-000 <br>
+            R$2,40
+            
+   `)
+   .addTo(map)
+
+   L.marker([-27.885083, -48.647740 ],{
+    title: "Pedágio", 
+    icon: dollarIcon,
+     
+   })
+   .bindPopup(`
+        <span class ="popup">
+            <b>Pedágio</b><br>
+            Enseada da Pinheira, Palhoça<br>
+            R$5,20
+            
+   `)
+   .addTo(map)
+
+   L.marker([-27.185075, -48.612270],{
+    title: "Pedágio", 
+    icon: dollarIcon,
+     
+   })
+   .bindPopup(`
+        <span class ="popup">
+            <b>Pedágio</b><br>
+            BR-101, Km 157,4 Porto Belo 88210-000<br>
+            R$5,20
+            
+   `)
+   .addTo(map)
+
+   L.marker([-27.185075, -48.612270],{
+    title: "Pedágio", 
+    icon: houseIcon,
+     
+   })
+   .bindPopup(`
+        <span class ="popup">
+            <b>Penha</b><br>
+            Cidade em que vamos ficar<br>
+   `)
+   .addTo(map)
+
+   L.marker([-28.423185, -48.798121],{
+    
+    title: "Paradouro", 
+    icon: stopIcon,
+     
+   })
+   .bindPopup(`
+       <img src="laguna-camarão.jpg.png" width='200' height='200'
+   <span class ="popup">
+            <h1>Pastel do Camarão</h1><br>
+            BR-101, Km 157,4 Porto Belo 88210-000<br>
+            
+   `)
+   .addTo(map)
+
+   L.marker([-29.102867, -49.637121],{
+    
+    title: "Paradouro", 
+    icon: stopIcon,
+     
+   })
+   .bindPopup(`
+       <img src="restaurante-japones.png" width='200' height='200'
+   <span class ="popup">
+            <h1>Restaurante do Japonês</h1><br>
+            Rodovia BR 101, km 436 Sombrio <br>
+            
+   `)
+   .addTo(map)
+
+</script>
+</html>
